@@ -1,0 +1,45 @@
+/*-- this is for webpage restae page desigm --*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "Roboto", sans-serif; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; }
+  ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Roboto", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #05386B;
+  transition: 0.4s;
+  font-family: "Roboto", sans-serif; }
+
+a:hover {
+  text-decoration: none;
+  color: #05386B; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; }
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif; }
+
+p {
+  margin: 0;
+  padding: 0;
+  color: #323232;
+  font-family: "Roboto", sans-serif; }
+
+/*------------------------
+main code start here 
+-------------------------*/
