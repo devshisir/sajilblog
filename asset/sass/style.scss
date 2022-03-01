@@ -462,7 +462,7 @@ main code start here
     position: fixed;
     bottom: 9%;
     right: 60px;
-    z-index: 999999999999;
+    z-index: 9999;
     height: 60px;
     width: 60px;
     background-color: $mainColor;
@@ -474,6 +474,11 @@ main code start here
     transition: 0.4s;
     &:hover{
         opacity: 0.7;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+        box-shadow: none;
     }
 }
 #open__info__box.toggle{
@@ -559,3 +564,425 @@ main code start here
     visibility: visible;
     z-index: 999999999999;
 }
+//  start mobile menu area 
+#mobile__menu__header{
+    display: none;
+    background-color: #fff;
+    z-index: 9999999999;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 14px 0px;
+    .menu__toggle{
+        button{
+            border: none;
+            background-color: transparent;
+            outline: none;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
+    }
+}
+
+// mobile menu content
+#mobile__menu__content{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $mainColor;
+    opacity: 0;
+    z-index: 999999999999999999999999;
+    visibility: hidden;
+    transition: 0.4s;
+    .menu__header{
+        padding: 20px 0px;
+        color: #fff;
+        span{
+            font-weight: 700;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+        button{
+            background-color: $mainColor;
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            outline: none;
+        }
+    }
+    .menu__nav{
+        padding: 50px 0px;
+        ul{
+            li{
+                display: block;
+                text-align: center;
+                a{
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #fff;
+                    display: inline-block;
+                    padding: 10px 0px;
+                }
+                .btn__sp{
+                    background-color: #fff;
+                    display: block;
+                    width: 100%;
+                    color: $mainColor;
+                    margin-top: 10px;
+                    padding: 14px 0px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+#mobile__menu__content.toggle{
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+
+
+// start responsive work
+/* XL (laptop) Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .message__box__btn {
+        bottom: 18%;
+    }
+}
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .message__box__btn {
+        bottom: 18%;
+    } 
+}
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    #second__header{
+        .logo__box{
+            text-align: center;
+        }
+        .nav__area{
+            text-align: center !important;
+            nav{
+                ul{
+                    li{
+                        a{
+                            padding: 10px 7px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    #blog__grid__area{
+        .blog__grid__2__flex{
+            flex-direction: row;
+            gap: 25px;
+        }
+        .blog__grid__layout__01{
+            margin-bottom: 30px;
+        }
+        .blog__grid__layout__02{
+            margin-bottom: 30px;
+        }
+    }
+    #feature__box{
+        .feature__box__item{
+            margin-bottom: 20px;
+        }
+    } 
+    #appdownload__area {
+        .download__main__content{
+            .left__content{
+                border: none;
+            }
+            .right__content{
+                padding: 0px;
+                margin-top: 40px;
+                .app__demo {
+                    img{
+                        left: 125px;
+                        top: -400px;
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        .footer__nav{
+            ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                li{
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    .message__box__btn{
+        bottom: 3%;
+        right: 17px;
+    }
+}
+
+/*-- Phone Landscape --*/
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #header_top{
+        .menu__box{
+            ul{
+                li{
+                    a{
+                        font-size: 11px;
+                        padding: 10px 8px;
+                    }
+                }
+            }
+        }
+        .search_box {
+            .input__box{
+                input{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    #second__header{
+        .logo__box{
+            text-align: center;
+        }
+        .nav__area{
+            text-align: center !important;
+            nav{
+                ul{
+                    li{
+                        a{
+                            padding: 10px 17px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    #blog__grid__area{
+        padding-bottom: 10px;
+        .blog__grid__2__flex{
+            flex-direction: row;
+            gap: 20px;
+        }
+        .blog__grid__layout__01{
+            margin-bottom: 30px;
+        }
+        .blog__grid__layout__02{
+            margin-bottom: 30px;
+            .blog__content{
+                .tag__line{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    #feature__box{
+        padding-bottom: 10px;
+        .feature__box__item{
+            margin-bottom: 20px;
+        }
+    } 
+    #appdownload__area {
+        .downalod__app__container{
+            padding: 30px 30px;
+        }
+        .download__main__content{
+            .left__content{
+                border: none;
+            }
+            .right__content{
+                padding: 0px;
+                margin-top: 40px;
+                .app__demo {
+                    text-align: center;
+                    img{
+                        left: 90px;
+                        top: -300px;
+                    }
+                }
+            }
+        }
+    }
+    #service__area{
+        padding: 30px 0px 0px 0px;
+        .single__service__item{
+            margin-bottom: 70px;
+        }
+    }
+    #footer{
+        .footer__nav{
+            ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                li{
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    .message__box__btn{
+        bottom: 3%;
+        right: 17px;
+    }
+}
+
+/* Extra small Device. */
+@media (max-width: 575px) {
+    #mobile__menu__header{
+        display: block;
+    }
+    #header_top{
+        .header_top_content{
+            flex-direction: column;
+            text-align: center !important;
+        }
+        .menu__box{
+            margin-right: 0px;
+            ul{
+                li{
+                    a{
+                       font-size: 13px;
+                    }
+                }
+            }
+        }
+        .search_box {
+            width: 90%;
+            .input__box{
+                input{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    #second__header{
+      display: none;
+    } 
+    #blog__grid__area{
+        padding-bottom: 10px;
+        .blog__grid__2__flex{
+            flex-direction: column;
+            gap: 0px;
+        }
+        .blog__grid__layout__01{
+            margin-bottom: 20px;
+        }
+        .blog__grid__layout__02{
+            margin-bottom: 20px;
+            .blog__content{
+                .tag__line{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    #feature__box{
+        padding-bottom: 10px;
+        .box__geater{
+            --bs-gutter-x: 1.5rem
+        }
+        .feature__box__item{
+            margin-bottom: 20px;
+        }
+    } 
+    #appdownload__area {
+        .top__title{
+            h3{
+                font-size: 19px;
+            }
+        }
+        .downalod__app__container{
+            padding: 20px 20px;
+            border-radius: 5px;
+            padding-bottom: 0px;
+        }
+        .download__main__content{
+            .left__content{
+                border: none;
+                padding-right: 0px;
+                h5{
+                    font-size: 14px;
+                    line-height: 23px;
+                }
+                .app__download__action{
+                    a{
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+            .right__content{
+                padding: 0px;
+                margin-top: 40px;
+                height: 587px;
+                .app__demo {
+                    text-align: center;
+                    img{
+                        position: relative;
+                        left: -115px;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+    #service__area{
+        padding: 20px 0px 0px 0px;
+        .single__service__item{
+            margin-bottom: 70px;
+            .image__box{
+                min-height: auto !important;
+                text-align: center;
+                display: block !important;
+            }
+        }
+        .top__title {
+            h3{
+                font-size: 18px;
+            }
+        }
+    }
+    #footer{
+        .footer__nav{
+            ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                li{
+                    margin: 0px 8px;
+                    a{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .message__box__btn{
+        bottom: 5%;
+        right: 17px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+    #info__box{
+        right: 20px;
+    }
+}
+
